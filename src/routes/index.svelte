@@ -1,13 +1,9 @@
 <script context="module">
     export async function load({ fetch }) {
-        const na = await fetch(`/points/NA`).then((r) => r.json());
-        const emea = await fetch(`/points/EMEA`).then((r) => r.json());
-        const apacn = await fetch(`/points/APAC N`).then((r) => r.json());
-        const apacs = await fetch(`/points/APAC S`).then((r) => r.json());
-        const sa = await fetch(`/points/SA`).then((r) => r.json());
+        const allPoints = await loadAll(fetch);
         return {
             props: {
-                points: [...na, ...emea, ...apacn, ...apacs, ...sa],
+                allPoints,
             },
         };
     }
@@ -15,46 +11,66 @@
 
 <script lang="ts">
     import { browser } from "$app/env";
-    const regions = ["NA", "EMEA", "APAC N", "APAC S", "SA", "Other"];
-    let region = "NA";
+    import { Endpoint, loadAll, regions } from "../libs/data";
+    import Map from "../libs/map.svelte";
+    import Controls from "../libs/controls.svelte";
+    import { forIn } from "lodash";
 
-    type EndPoint = {
-        pointX?: number;
-        pointY?: number;
-        circleX?: number;
-        circleY?: number;
-        color?: string;
-        description: string;
-    };
-    export let points: EndPoint[] = [{ description: "" }];
-    let current = 0;
 
-    function updateCurrent(update: (currentPoint: EndPoint) => EndPoint) {
-        points[current] = update(points[current]);
-        points = points;
+    export let allPoints: Record<string, Endpoint[]> = {};
+
+    const regionOptions = ["All", ...regions];
+    let selectedRegion = "All";
+    let points: Record<string, Endpoint[]> = {};
+    let currentPoint: Endpoint;
+    let selectablePoints: string[];
+    let allowEdit = false;
+
+    $: {
+        points =
+            selectedRegion === "All"
+                ? allPoints
+                : { [selectedRegion]: allPoints[selectedRegion] };
     }
 
-    function loadRegion() {
-        current = 0;
-        fetch(`/points/${region}`)
-            .then((r) => r.json())
-            .then((p) => (points = p));
+    $: {
+        selectablePoints = (
+            selectedRegion === "All"
+                ? Object.entries(allPoints).flatMap(([, points]) => points)
+                : allPoints[selectedRegion]
+        ).map((point) => point.description);
     }
 
-    function updatePoints() {
+    $: {
+        currentPoint = points[Object.keys(points)[0]][0];
+    }
+
+    function updateCurrent(update: (currentPoint: Endpoint) => Endpoint) {
+        allPoints[selectedRegion] = allPoints[selectedRegion].map((point) =>
+            point.description === currentPoint.description
+                ? update(point)
+                : point
+        );
+        allPoints = allPoints;
+    }
+
+    function save() {
         if (
             browser &&
-            points[current].circleX != null &&
-            points[current].pointX != null
+            currentPoint.circleX != null &&
+            currentPoint.pointX != null
         ) {
-            fetch(`/points/${region}`, {
+            fetch(`/points/${selectedRegion}`, {
                 method: "PUT",
-                body: JSON.stringify(points),
+                body: JSON.stringify(points[selectedRegion]),
             });
         }
     }
 
     function addCircle(event: MouseEvent) {
+        if (selectedRegion === "All" || !allowEdit) {
+            return;
+        }
         event.preventDefault();
         updateCurrent((point) => ({
             ...point,
@@ -64,6 +80,9 @@
     }
 
     function addPoint(event: MouseEvent) {
+        if (selectedRegion === "All" || !allowEdit) {
+            return;
+        }
         event.preventDefault();
         updateCurrent((point) => ({
             ...point,
@@ -72,27 +91,36 @@
         }));
     }
 
-    function handleKeydown(event: KeyboardEvent) {
-        if (event.key === "ArrowUp") {
-            if (
-                points[current].circleX != null &&
-                points[current].pointX != null
-            ) {
-                if (!points[current + 1]) {
-                    points = [
-                        ...points,
-                        {
-                            description: points[current].description,
-                        },
-                    ];
+    function changeSelectedPoint({ detail }: CustomEvent<string>) {
+        this.currentPoint = forIn(allPoints, (points) =>
+            points.forEach((point) => {
+                if (point.description === detail) {
+                    currentPoint = point;
                 }
-                current++;
+            })
+        );
+    }
+
+    function handleKeydown(event: KeyboardEvent) {
+        if (selectedRegion === "All") {
+            return;
+        }
+
+        if (event.key === "ArrowUp") {
+            const current = allPoints[selectedRegion].indexOf(currentPoint); 
+            if (
+                currentPoint.circleX != null &&
+                currentPoint.pointX != null &&
+                current < allPoints[selectedRegion].length - 1
+            ) {
+                currentPoint = allPoints[selectedRegion][current + 1];
             }
             event.preventDefault();
         }
         if (event.key === "ArrowDown") {
+            const current = points[selectedRegion].indexOf(currentPoint); 
             if (current > 0) {
-                current--;
+                currentPoint = allPoints[selectedRegion][current - 1];
             }
             event.preventDefault();
         }
@@ -100,107 +128,26 @@
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
-<div class="container">
-    <div class="controls">
-        <select bind:value={region} on:change={loadRegion}>
-            {#each regions as region}
-                <option value={region}>
-                    {region}
-                </option>
-            {/each}
-        </select>
-        <input
-            type="number"
-            bind:value={current}
-            min="0"
-            max={points.length + 1}
-        />
-        <input
-            bind:value={points[current].description}
-            placeholder="Description"
-        />
-        <button on:click={updatePoints}>Save</button>
-    </div>
-    <div class="map">
-        <img src="/test.jpg" on:contextmenu={addCircle} on:click={addPoint} />
-
-        {#each points as { pointX, pointY, circleX, circleY, description, color }, i}
-            {#if circleX != null}
-                <div
-                    class="final-circle"
-                    class:active-circle={i === current}
-                    style="left: {circleX}px; top: {circleY}px; border: 3px solid {color};"
-                >
-                    <span class="description">{description}</span>
-                </div>
-            {/if}
-            {#if pointX != null}
-                <div
-                    class="final-point"
-                    class:active-point={i === current}
-                    style="left: {pointX}px; top: {pointY}px; background-color: {color};"
-                />
-            {/if}
-        {/each}
-    </div>
+<Controls
+    bind:allowEdit
+    regions={regionOptions}
+    points={selectablePoints}
+    selectedPoint={currentPoint?.description}
+    on:descriptionChange={changeSelectedPoint}
+    on:save={save}
+    bind:selectedRegion
+/>
+<div class="container" on:click={addPoint} on:contextmenu={addCircle}>
+    <Map {points} active={currentPoint?.description} />
 </div>
 
 <style>
     .container {
         display: flex;
         flex-direction: column;
-    }
-
-    .controls {
-        display: flex;
-        height: 150px;
-    }
-
-    .controls > * {
-        font-size: 100px;
-    }
-
-    .map {
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
         position: relative;
-    }
-
-    .final-circle {
-        position: absolute;
-        border-radius: 50%;
-        height: 191px;
-        width: 191px;
-        border: 3px solid blue;
-        transform: translate(-50%, -50%);
-        color: white;
-        box-sizing: border-box;
-        padding-top: 16px;
-        text-align: center;
-        pointer-events: none;
-    }
-
-    /* .description {
-        visibility: hidden;
-    }
-
-    .final-circle:hover .description {
-        visibility: visible;
-    } */
-
-    .final-point {
-        position: absolute;
-        border-radius: 50%;
-        height: 16px;
-        width: 16px;
-        background-color: blue;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-    }
-
-    .active-circle {
-        background-color: rgba(255, 255, 255, 0.308);
-    }
-
-    .active-point {
-        background-color: rgb(255, 0, 221);
     }
 </style>

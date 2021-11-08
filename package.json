@@ -9,6 +9,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@sveltejs/adapter-netlify": "^1.0.0-next.35",
     "@sveltejs/kit": "next",
     "svelte": "^3.42.6",
     "svelte-check": "^2.2.6",
@@ -16,5 +17,10 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@types/lodash": "^4.14.176",
+    "lodash": "^4.17.21",
+    "panzoom": "^9.4.2"
+  }
 }

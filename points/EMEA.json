@@ -1,7 +1,7 @@
 [
     {
         "color": "pink",
-        "description": "Day 1 Game 1",
+        "description": "EMEA Day 1 Game 1",
         "pointX": 1298,
         "pointY": 3324,
         "circleX": 1298,
@@ -9,7 +9,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 1 Game 2",
+        "description": "EMEA Day 1 Game 2",
         "pointX": 2136,
         "pointY": 3156,
         "circleX": 2145,
@@ -17,7 +17,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 1 Game 3",
+        "description": "EMEA Day 1 Game 3",
         "pointX": 3243,
         "pointY": 1418,
         "circleX": 3248,
@@ -25,7 +25,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 1 Game 4",
+        "description": "EMEA Day 1 Game 4",
         "pointX": 920,
         "pointY": 699,
         "circleX": 935,
@@ -33,7 +33,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 1 Game 5",
+        "description": "EMEA Day 1 Game 5",
         "pointX": 3177,
         "pointY": 3602,
         "circleX": 3182,
@@ -41,7 +41,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 1 Game 6",
+        "description": "EMEA Day 1 Game 6",
         "pointX": 3287,
         "pointY": 1500,
         "circleX": 3293,
@@ -49,7 +49,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 1",
+        "description": "EMEA Day 2 Game 1",
         "pointX": 2367,
         "pointY": 3405,
         "circleX": 2354,
@@ -57,7 +57,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 2",
+        "description": "EMEA Day 2 Game 2",
         "pointX": 3099,
         "pointY": 3204,
         "circleX": 3123,
@@ -65,7 +65,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 3",
+        "description": "EMEA Day 2 Game 3",
         "pointX": 1559,
         "pointY": 1695,
         "circleX": 1566,
@@ -73,7 +73,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 4",
+        "description": "EMEA Day 2 Game 4",
         "pointX": 3089,
         "pointY": 1404,
         "circleX": 3084,
@@ -81,7 +81,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 5",
+        "description": "EMEA Day 2 Game 5",
         "circleX": 3053,
         "circleY": 1815,
         "pointX": 3054,
@@ -89,7 +89,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 2 Game 6",
+        "description": "EMEA Day 2 Game 6",
         "pointX": 1220,
         "pointY": 1481,
         "circleX": 1223,
@@ -97,7 +97,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 1",
+        "description": "EMEA Day 3 Game 1",
         "pointX": 1879,
         "pointY": 1121,
         "circleX": 1871,
@@ -105,7 +105,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 2",
+        "description": "EMEA Day 3 Game 2",
         "pointX": 1013,
         "pointY": 2271,
         "circleX": 1004,
@@ -113,7 +113,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 3",
+        "description": "EMEA Day 3 Game 3",
         "pointX": 1483,
         "pointY": 3493,
         "circleX": 1485,
@@ -121,7 +121,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 4",
+        "description": "EMEA Day 3 Game 4",
         "pointX": 3225,
         "pointY": 3206,
         "circleX": 3236,
@@ -129,7 +129,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 5",
+        "description": "EMEA Day 3 Game 5",
         "pointX": 2761,
         "pointY": 2761,
         "circleX": 2753,
@@ -137,7 +137,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 3 Game 6",
+        "description": "EMEA Day 3 Game 6",
         "pointX": 1645,
         "pointY": 1534,
         "circleX": 1653,
@@ -145,7 +145,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 1",
+        "description": "EMEA Day 4 Game 1",
         "circleX": 1747,
         "circleY": 2665,
         "pointX": 1737,
@@ -153,7 +153,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 2",
+        "description": "EMEA Day 4 Game 2",
         "circleX": 3164,
         "circleY": 2835,
         "pointX": 3159,
@@ -161,7 +161,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 3",
+        "description": "EMEA Day 4 Game 3",
         "pointX": 3112,
         "pointY": 3093,
         "circleX": 3097,
@@ -169,7 +169,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 4",
+        "description": "EMEA Day 4 Game 4",
         "pointX": 2713,
         "pointY": 2657,
         "circleX": 2711,
@@ -177,7 +177,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 5",
+        "description": "EMEA Day 4 Game 5",
         "pointX": 2185,
         "pointY": 1113,
         "circleX": 2177,
@@ -185,7 +185,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 4 Game 6",
+        "description": "EMEA Day 4 Game 6",
         "circleX": 3359,
         "circleY": 3161,
         "pointX": 3373,
@@ -193,7 +193,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 1",
+        "description": "EMEA Day 5 Game 1",
         "circleX": 1880,
         "circleY": 2937,
         "pointX": 1888,
@@ -201,7 +201,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 2",
+        "description": "EMEA Day 5 Game 2",
         "pointX": 3196,
         "pointY": 2902,
         "circleX": 3188,
@@ -209,7 +209,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 3",
+        "description": "EMEA Day 5 Game 3",
         "pointX": 1669,
         "pointY": 2606,
         "circleX": 1651,
@@ -217,7 +217,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 4",
+        "description": "EMEA Day 5 Game 4",
         "circleX": 2795,
         "circleY": 1549,
         "pointX": 2781,
@@ -225,7 +225,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 5",
+        "description": "EMEA Day 5 Game 5",
         "pointX": 3109,
         "pointY": 1998,
         "circleX": 3109,
@@ -233,7 +233,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 5 Game 6",
+        "description": "EMEA Day 5 Game 6",
         "pointX": 1157,
         "pointY": 1885,
         "circleX": 1151,
@@ -241,7 +241,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 1",
+        "description": "EMEA Day 6 Game 1",
         "pointX": 751,
         "pointY": 2190,
         "circleX": 743,
@@ -249,7 +249,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 2",
+        "description": "EMEA Day 6 Game 2",
         "pointX": 2941,
         "pointY": 3729,
         "circleX": 2933,
@@ -257,7 +257,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 3",
+        "description": "EMEA Day 6 Game 3",
         "pointX": 2607,
         "pointY": 3022,
         "circleX": 2607,
@@ -265,7 +265,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 4",
+        "description": "EMEA Day 6 Game 4",
         "pointX": 3111,
         "pointY": 3091,
         "circleX": 3097,
@@ -273,7 +273,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 5",
+        "description": "EMEA Day 6 Game 5",
         "pointX": 1701,
         "pointY": 2938,
         "circleX": 1707,
@@ -281,7 +281,7 @@
     },
     {
         "color": "pink",
-        "description": "Day 6 Game 6",
+        "description": "EMEA Day 6 Game 6",
         "pointX": 2061,
         "pointY": 2481,
         "circleX": 2048,
