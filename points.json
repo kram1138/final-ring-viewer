@@ -1,0 +1,254 @@
+[
+    {
+        "pointX": 2795,
+        "pointY": 2655,
+        "description": "Week 1 Day 1 Game 1",
+        "circleX": 2784,
+        "circleY": 2658
+    },
+    {
+        "pointX": 1989,
+        "pointY": 1255,
+        "description": "Week 1 Day 1 Game 2",
+        "circleX": 1991,
+        "circleY": 1259
+    },
+    {
+        "pointX": 2129,
+        "pointY": 3153,
+        "description": "Week 1 Day 1 Game 3",
+        "circleX": 2139,
+        "circleY": 3158
+    },
+    {
+        "pointX": 2767,
+        "pointY": 3604,
+        "description": "Week 1 Day 1 Game 4",
+        "circleX": 2765,
+        "circleY": 3599
+    },
+    {
+        "pointX": 2181,
+        "pointY": 1160,
+        "description": "Week 1 Day 1 Game 5",
+        "circleX": 2175,
+        "circleY": 1169
+    },
+    {
+        "pointX": 1560,
+        "pointY": 1870,
+        "description": "Week 1 Day 1 Game 6",
+        "circleX": 1553,
+        "circleY": 1859
+    },
+    {
+        "pointX": 1980,
+        "pointY": 2646,
+        "description": "Week 1 Day 2 Game 1",
+        "circleX": 1983,
+        "circleY": 2637
+    },
+    {
+        "pointX": 1323,
+        "pointY": 3440,
+        "description": "Week 1 Day 2 Game 2",
+        "circleX": 1328,
+        "circleY": 3429
+    },
+    {
+        "pointX": 954,
+        "pointY": 3000,
+        "description": "Week 1 Day 2 Game 3",
+        "circleX": 960,
+        "circleY": 2994
+    },
+    {
+        "pointX": 1902,
+        "pointY": 2834,
+        "description": "Week 1 Day 2 Game 4",
+        "circleX": 1884,
+        "circleY": 2834
+    },
+    {
+        "pointX": 2666,
+        "pointY": 2227,
+        "description": "Week 1 Day 2 Game 5",
+        "circleX": 2678,
+        "circleY": 2232
+    },
+    {
+        "pointX": 1955,
+        "pointY": 3474,
+        "description": "Week 1 Day 2 Game 6",
+        "circleX": 1944,
+        "circleY": 3453
+    },
+    {
+        "pointX": 2945,
+        "pointY": 3930,
+        "description": "Week 2 Day 1 Game 1",
+        "circleX": 2934,
+        "circleY": 3923
+    },
+    {
+        "pointX": 936,
+        "pointY": 1420,
+        "description": "Week 2 Day 1 Game 2",
+        "circleX": 939,
+        "circleY": 1424
+    },
+    {
+        "pointX": 3255,
+        "pointY": 1369,
+        "description": "Week 2 Day 1 Game 3",
+        "circleX": 3266,
+        "circleY": 1385
+    },
+    {
+        "pointX": 3367,
+        "pointY": 2511,
+        "description": "Week 2 Day 1 Game 4",
+        "circleX": 3377,
+        "circleY": 2511
+    },
+    {
+        "pointX": 2364,
+        "pointY": 1556,
+        "description": "Week 2 Day 1 Game 5",
+        "circleX": 2391,
+        "circleY": 1560
+    },
+    {
+        "pointX": 1320,
+        "pointY": 3231,
+        "description": "Week 2 Day 1 Game 6",
+        "circleX": 1308,
+        "circleY": 3231
+    },
+    {
+        "pointX": 1136,
+        "pointY": 1264,
+        "description": "Week 2 Day 2 Game 1",
+        "circleX": 1143,
+        "circleY": 1259
+    },
+    {
+        "pointX": 1892,
+        "pointY": 3454,
+        "description": "Week 2 Day 2 Game 2",
+        "circleX": 1894,
+        "circleY": 3447
+    },
+    {
+        "pointX": 2617,
+        "pointY": 3799,
+        "description": "Week 2 Day 2 Game 3",
+        "circleX": 2627,
+        "circleY": 3802
+    },
+    {
+        "pointX": 1602,
+        "pointY": 1562,
+        "description": "Week 2 Day 2 Game 4",
+        "circleX": 1608,
+        "circleY": 1561
+    },
+    {
+        "pointX": 2752,
+        "pointY": 2843,
+        "description": "Week 2 Day 2 Game 5",
+        "circleX": 2769,
+        "circleY": 2841
+    },
+    {
+        "pointX": 2370,
+        "pointY": 1714,
+        "description": "Week 2 Day 2 Game 6",
+        "circleX": 2365,
+        "circleY": 1717
+    },
+    {
+        "description": "Week 3 Day 1 Game 1",
+        "pointX": 1113,
+        "pointY": 2394,
+        "circleX": 1113,
+        "circleY": 2383
+    },
+    {
+        "description": "Week 3 Day 1 Game 2",
+        "pointX": 2380,
+        "pointY": 1681,
+        "circleX": 2391,
+        "circleY": 1686
+    },
+    {
+        "description": "Week 3 Day 1 Game 3",
+        "circleX": 1332,
+        "circleY": 2765,
+        "pointX": 1331,
+        "pointY": 2758
+    },
+    {
+        "description": "Week 3 Day 1 Game 4",
+        "pointX": 2663,
+        "pointY": 2490,
+        "circleX": 2673,
+        "circleY": 2475
+    },
+    {
+        "description": "Week 3 Day 1 Game 5",
+        "pointX": 3040,
+        "pointY": 981,
+        "circleX": 3019,
+        "circleY": 1002
+    },
+    {
+        "description": "Week 3 Day 1 Game 6",
+        "pointX": 3180,
+        "pointY": 2881,
+        "circleX": 3179,
+        "circleY": 2878
+    },
+    {
+        "description": "Week 3 Day 2 Game 1",
+        "pointX": 2532,
+        "pointY": 3917,
+        "circleX": 2524,
+        "circleY": 3909
+    },
+    {
+        "description": "Week 3 Day 2 Game 2",
+        "pointX": 2995,
+        "pointY": 2091,
+        "circleX": 2991,
+        "circleY": 2101
+    },
+    {
+        "description": "Week 3 Day 2 Game 3",
+        "pointX": 1519,
+        "pointY": 2479,
+        "circleX": 1529,
+        "circleY": 2454
+    },
+    {
+        "description": "Week 3 Day 2 Game 4",
+        "pointX": 2315,
+        "pointY": 1659,
+        "circleX": 2320,
+        "circleY": 1638
+    },
+    {
+        "description": "Week 3 Day 2 Game 5",
+        "pointX": 2180,
+        "pointY": 883,
+        "circleX": 2175,
+        "circleY": 906
+    },
+    {
+        "description": "Week 3 Day 2 Game 6",
+        "pointX": 1155,
+        "pointY": 2342,
+        "circleX": 1155,
+        "circleY": 2342
+    }
+]
