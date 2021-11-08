@@ -1,4 +1,4 @@
-import { fromPairs } from "lodash";
+import { fromPairs } from "lodash-es";
 
 export const regions = ["NA", "EMEA", "APAC N", "APAC S", "SA", "Other"];
 

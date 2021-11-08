@@ -9,6 +9,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.14.176",
     "@sveltejs/adapter-netlify": "^1.0.0-next.35",
     "@sveltejs/kit": "next",
     "svelte": "^3.42.6",
@@ -19,8 +20,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@types/lodash": "^4.14.176",
-    "lodash": "^4.17.21",
-    "panzoom": "^9.4.2"
+    "lodash-es": "^4.17.21"
   }
 }

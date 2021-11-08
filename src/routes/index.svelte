@@ -14,7 +14,7 @@
     import { Endpoint, loadAll, regions } from "../libs/data";
     import Map from "../libs/map.svelte";
     import Controls from "../libs/controls.svelte";
-    import { forIn } from "lodash";
+    import { forIn } from "lodash-es";
 
 
     export let allPoints: Record<string, Endpoint[]> = {};
