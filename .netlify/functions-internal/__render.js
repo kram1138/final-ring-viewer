@@ -4686,7 +4686,7 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 }
 
 // .svelte-kit/output/server/app.js
-var import_promises = __toModule(require("fs/promises"));
+var import_fs = __toModule(require("fs"));
 var __accessCheck = (obj, member, msg) => {
   if (!member.has(obj))
     throw TypeError("Cannot " + msg);
@@ -6195,7 +6195,7 @@ function init(settings = default_settings) {
 var d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
 var empty = () => ({});
 var manifest = {
-  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "worlds_edge.jpg", "size": 3204590, "type": "image/jpeg" }],
+  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "points/APAC N.json", "size": 6869, "type": "application/json" }, { "file": "points/APAC S.json", "size": 4188, "type": "application/json" }, { "file": "points/EMEA.json", "size": 6729, "type": "application/json" }, { "file": "points/NA.json", "size": 6620, "type": "application/json" }, { "file": "points/Other.json", "size": 1947, "type": "application/json" }, { "file": "points/SA.json", "size": 4124, "type": "application/json" }, { "file": "worlds_edge.jpg", "size": 3204590, "type": "image/jpeg" }],
   layout: ".svelte-kit/build/components/layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [
@@ -6261,11 +6261,11 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender });
 }
 async function get({ params }) {
-  const points = JSON.parse((await (0, import_promises.readFile)(`points/${params.region}.json`)).toString());
+  const points = JSON.parse((await import_fs.default.promises.readFile(`points/${params.region}.json`)).toString());
   return { body: points };
 }
 async function put({ body, params }) {
-  await (0, import_promises.writeFile)(`points/${params.region}.json`, body);
+  await import_fs.default.promises.writeFile(`points/${params.region}.json`, body);
   return { status: 200 };
 }
 var _region_ = /* @__PURE__ */ Object.freeze({
