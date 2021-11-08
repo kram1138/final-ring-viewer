@@ -3,9 +3,11 @@
         const na = await fetch(`/points/NA`).then((r) => r.json());
         const emea = await fetch(`/points/EMEA`).then((r) => r.json());
         const apacn = await fetch(`/points/APAC N`).then((r) => r.json());
+        const apacs = await fetch(`/points/APAC S`).then((r) => r.json());
+        const sa = await fetch(`/points/SA`).then((r) => r.json());
         return {
             props: {
-                points: [...na, ...emea, ...apacn],
+                points: [...na, ...emea, ...apacn, ...apacs, ...sa],
             },
         };
     }
@@ -173,15 +175,16 @@
         box-sizing: border-box;
         padding-top: 16px;
         text-align: center;
+        pointer-events: none;
     }
 
-    .description {
+    /* .description {
         visibility: hidden;
     }
 
     .final-circle:hover .description {
         visibility: visible;
-    }
+    } */
 
     .final-point {
         position: absolute;
