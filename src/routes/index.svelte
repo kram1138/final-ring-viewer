@@ -10,12 +10,12 @@
 </script>
 
 <script lang="ts">
-    import { browser, dev } from "$app/env";
-    import { Endpoint, loadAll, regions } from "../libs/data";
-    import Map from "../libs/map.svelte";
-    import Controls from "../libs/controls.svelte";
+    import { browser,dev } from "$app/env";
     import { forIn } from "lodash-es";
-    import { endpoints } from "src/libs/points";
+    import Controls from "../libs/controls.svelte";
+    import { Endpoint,loadAll,regions } from "../libs/data";
+    import Map from "../libs/map.svelte";
+    import { endpoints } from "../libs/points";
 
     export let allPoints: Record<string, Endpoint[]> = {};
 
