@@ -50,7 +50,7 @@
             selectedRegion === "All"
                 ? Object.entries(allPoints).flatMap(([, points]) => points)
                 : allPoints[selectedRegion]
-        ).map((point) => point.description);
+        )?.map((point) => point.description);
     }
 
     $: if (
