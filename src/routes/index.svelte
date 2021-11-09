@@ -16,7 +16,6 @@
     import Controls from "../libs/controls.svelte";
     import { forIn } from "lodash-es";
 
-
     export let allPoints: Record<string, Endpoint[]> = {};
 
     const regionOptions = ["All", ...regions];
@@ -25,7 +24,19 @@
     let currentPoint: Endpoint;
     let selectablePoints: string[];
     let allowEdit = false;
-
+    // points = {
+    //     "A": Array(180).fill(null).map((_, i) => {
+    //         const x = Math.random() * 3200 + 400;
+    //         const y = Math.random() * 3200 + 400;
+    //         return {
+    //             description: `${i}`,
+    //             circleX: x,
+    //             circleY: y,
+    //             pointX: x,
+    //             pointY: y
+    //         }
+    //     })
+    // }
     $: {
         points =
             selectedRegion === "All"
@@ -41,14 +52,21 @@
         ).map((point) => point.description);
     }
 
-    $: {
+    $: if (
+        selectedRegion !== "All" &&
+        (!currentPoint ||
+            !points[selectedRegion].some(
+                (point) => point.description === currentPoint.description
+            ))
+    ) {
         currentPoint = points[Object.keys(points)[0]][0];
     }
 
     function updateCurrent(update: (currentPoint: Endpoint) => Endpoint) {
+        currentPoint = update(currentPoint);
         allPoints[selectedRegion] = allPoints[selectedRegion].map((point) =>
             point.description === currentPoint.description
-                ? update(point)
+                ? currentPoint
                 : point
         );
         allPoints = allPoints;
@@ -107,7 +125,7 @@
         }
 
         if (event.key === "ArrowUp") {
-            const current = allPoints[selectedRegion].indexOf(currentPoint); 
+            const current = allPoints[selectedRegion].indexOf(currentPoint);
             if (
                 currentPoint.circleX != null &&
                 currentPoint.pointX != null &&
@@ -118,7 +136,7 @@
             event.preventDefault();
         }
         if (event.key === "ArrowDown") {
-            const current = points[selectedRegion].indexOf(currentPoint); 
+            const current = points[selectedRegion].indexOf(currentPoint);
             if (current > 0) {
                 currentPoint = allPoints[selectedRegion][current - 1];
             }

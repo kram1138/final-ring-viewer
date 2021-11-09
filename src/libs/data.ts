@@ -1,6 +1,6 @@
 import { fromPairs } from "lodash-es";
 
-export const regions = ["NA", "EMEA", "APAC N", "APAC S", "SA", "Other"];
+export const regions = ["NA", "EMEA", "APAC N", "APAC S", "SA", "Div B"];
 
 export type Endpoint = {
     pointX?: number;
