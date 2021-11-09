@@ -1,6 +1,6 @@
 <script context="module">
     export async function load({ fetch }) {
-        const allPoints = await loadAll(fetch);
+        const allPoints = dev ? await loadAll(fetch) : endpoints;
         return {
             props: {
                 allPoints,
@@ -10,11 +10,12 @@
 </script>
 
 <script lang="ts">
-    import { browser } from "$app/env";
+    import { browser, dev } from "$app/env";
     import { Endpoint, loadAll, regions } from "../libs/data";
     import Map from "../libs/map.svelte";
     import Controls from "../libs/controls.svelte";
     import { forIn } from "lodash-es";
+    import { endpoints } from "src/libs/points";
 
     export let allPoints: Record<string, Endpoint[]> = {};
 

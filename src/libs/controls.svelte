@@ -1,5 +1,6 @@
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
+    import { dev } from "$app/env";
 
     export let allowEdit: boolean;
     export let regions: string[];
@@ -31,17 +32,19 @@
             </option>
         {/each}
     </select>
-    <button
-        disabled={selectedRegion === "All"}
-        on:click={() => dispatch("save")}>Save</button
-    >
-    <input
-        class="checkbox"
-        type="checkbox"
-        id="edit"
-        bind:checked={allowEdit}
-    />
-    <label for="edit"> Allow edit</label><br />
+    {#if dev}
+        <button
+            disabled={selectedRegion === "All"}
+            on:click={() => dispatch("save")}>Save</button
+        >
+        <input
+            class="checkbox"
+            type="checkbox"
+            id="edit"
+            bind:checked={allowEdit}
+        />
+        <label for="edit"> Allow edit</label><br />
+    {/if}
 </div>
 
 <style>
