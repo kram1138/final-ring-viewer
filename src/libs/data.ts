@@ -1,23 +1,31 @@
-import { fromPairs } from "lodash-es";
 
-export const regions = ["NA", "EMEA", "APAC N", "APAC S", "SA", "Div B"];
-export const algsRegions = ["NA", "EMEA", "APAC N", "APAC S", "SA"];
+export type GroupInfo = {
+    description: string;
+    color: string;
+    matches: MatchInfo[];
+}
+
+export type MatchInfo = {
+    description: string;
+    games: Endpoint[];
+}
 
 export type Endpoint = {
     pointX?: number;
     pointY?: number;
     circleX?: number;
     circleY?: number;
-    color?: string;
-    description: string;
 };
 
-export async function loadAll(fetch: (info: RequestInfo) => Promise<Response>): Promise<Record<string, Endpoint[]>> {
-    return Promise.all(
-        regions.map((region) =>
-            fetch(`/points/${region}`)
-                .then((r) => r.json())
-                .then((ps) => [region, ps])
-        )
-    ).then(fromPairs);
+export type EndpointMarker = {
+    pointX?: number;
+    pointY?: number;
+    circleX?: number;
+    circleY?: number;
+    color: string;
+    tooltip: string;
+};
+
+export async function loadAll(fetch: (info: RequestInfo) => Promise<Response>): Promise<GroupInfo[]> {
+    return fetch(`/points`).then((r) => r.json());
 }

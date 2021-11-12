@@ -37,34 +37,27 @@
             disabled={selectedRegion === "All"}
             on:click={() => dispatch("save")}>Save</button
         >
-        <input
-            class="checkbox"
-            type="checkbox"
-            id="edit"
-            bind:checked={allowEdit}
-        />
-        <label for="edit"> Allow edit</label><br />
+        <span>
+            <input
+                class="checkbox"
+                type="checkbox"
+                id="edit"
+                bind:checked={allowEdit}
+            />
+            <label for="edit"> Allow edit</label><br /></span
+        >
     {/if}
 </div>
 
 <style>
     .controls {
         display: flex;
-        height: 50px;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        color: white;
+        flex-direction: column;
         align-items: stretch;
     }
 
-    .controls > * {
-        font-size: 25px;
-    }
-
-    .checkbox {
-        height: 100%;
-        width: 50px;
-        margin: 0;
+    span {
+        display: flex;
+        align-items: center;
     }
 </style>
