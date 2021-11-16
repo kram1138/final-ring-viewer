@@ -43,8 +43,14 @@
     } else {
         const group = allGroups[selectedGroup];
         const match = group.matches[selectedMatch];
-        points = match.games.map(
-            (point, i) => toMarker(selectedGame === "all" || i !== selectedGame ? group.color : "white", group.description, match.description)(point, i)
+        points = match.games.map((point, i) =>
+            toMarker(
+                selectedGame === "all" || i !== selectedGame
+                    ? group.color
+                    : "white",
+                group.description,
+                match.description
+            )(point, i)
         );
     }
 
@@ -150,9 +156,6 @@
     }
 </script>
 
-Group: {selectedGroup}
-Match: {selectedMatch}
-Game: {selectedGame}
 <svelte:window on:keydown={keydown} />
 <div class="page-container">
     <Tree
@@ -165,16 +168,18 @@ Game: {selectedGame}
         on:addGame={addGame}
         on:addMatch={addMatch}
     >
-        <span>
-            <input
-                class="checkbox"
-                type="checkbox"
-                id="edit"
-                bind:checked={allowEdit}
-            />
-            <label for="edit">Allow editing points</label>
-        </span>
-        <button on:click={save}>Save</button>
+        {#if dev}
+            <span>
+                <input
+                    class="checkbox"
+                    type="checkbox"
+                    id="edit"
+                    bind:checked={allowEdit}
+                />
+                <label for="edit">Allow editing points</label>
+            </span>
+            <button on:click={save}>Save</button>
+        {/if}
     </Tree>
     <Map
         {points}
