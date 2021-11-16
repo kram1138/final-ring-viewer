@@ -1,9 +1,11 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import type { Endpoint, EndpointMarker } from "./data";
-    import type { Map } from "leaflet";
+    import type { LeafletMouseEvent, Map } from "leaflet";
+    import { createEventDispatcher, onMount } from "svelte";
+    import type { EndpointMarker } from "./data";
+    const dispatch = createEventDispatcher();
 
     export let points: EndpointMarker[] = [];
+    export let allowKeyboardNav = true;
 
     let elements: L.Circle[] = [];
     let mapElement: HTMLDivElement;
@@ -21,6 +23,18 @@
         ] as any;
         L.imageOverlay("worlds_edge.jpg", bounds).addTo(map);
         map.fitBounds(bounds);
+        map.on("click", (event: LeafletMouseEvent) =>
+            dispatch("mapClick", {
+                x: event.latlng.lng,
+                y: 4096 - event.latlng.lat,
+            })
+        );
+        map.on("contextmenu", (event: LeafletMouseEvent) =>
+            dispatch("mapRightClick", {
+                x: event.latlng.lng,
+                y: 4096 - event.latlng.lat,
+            })
+        );
     });
 
     $: if (map) {
@@ -49,13 +63,21 @@
         );
         elements.forEach((layer) => layer.addTo(map));
     }
+
+    $: if (map) {
+        allowKeyboardNav ? map.keyboard.enable() : map.keyboard.disable();
+    }
 </script>
 
-<div class="map" bind:this={mapElement} />
+<div class="map" class:no-grab={!allowKeyboardNav} bind:this={mapElement} />
 
 <style>
     .map {
         width: 100%;
         height: 100%;
+    }
+
+    .no-grab {
+        cursor: initial;
     }
 </style>

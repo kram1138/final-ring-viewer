@@ -1,53 +1,37 @@
 <script lang="ts">
+    import { browser } from "$app/env";
     import { createEventDispatcher } from "svelte";
-    import { dev } from "$app/env";
+    import Modal, { getModal } from "./modal.svelte";
+
+    const dispatch = createEventDispatcher();
 
     export let allowEdit: boolean;
-    export let regions: string[];
-    export let points: string[];
-    export let selectedRegion: string;
-    export let selectedPoint: string;
-    const dispatch = createEventDispatcher();
+    export let allowAddMatch: boolean;
+    export let allowAddGame: boolean;
+    let groupDescription = "";
+    let matchDescription = "";
+    let color = "blue";
 </script>
 
 <div class="controls">
-    <select
-        bind:value={selectedRegion}
-        on:change={() => dispatch("regionChange", selectedRegion)}
+    <button
+        on:click={() =>
+            getModal("group").open((result) => dispatch("addGroup", result))}
     >
-        {#each regions as region}
-            <option value={region}>
-                {region}
-            </option>
-        {/each}
-    </select>
-    <select
-        bind:value={selectedPoint}
-        placeholder="Description"
-        on:change={() => dispatch("descriptionChange", selectedPoint)}
+        Add group
+    </button>
+    <button
+        disabled={!allowAddMatch}
+        on:click={() =>
+            getModal("match").open((result) => dispatch("addMatch", result))}
+        >Add match</button
     >
-        {#each points as description}
-            <option value={description}>
-                {description}
-            </option>
-        {/each}
-    </select>
-    {#if dev}
-        <button
-            disabled={selectedRegion === "All"}
-            on:click={() => dispatch("save")}>Save</button
-        >
-        <span>
-            <input
-                class="checkbox"
-                type="checkbox"
-                id="edit"
-                bind:checked={allowEdit}
-            />
-            <label for="edit"> Allow edit</label><br /></span
-        >
-    {/if}
+    <button disabled={!allowAddGame} on:click={() => dispatch("addGame")}>
+        Add game
+    </button>
+    <button on:click={() => dispatch("save")}>Save</button>
 </div>
+
 
 <style>
     .controls {
