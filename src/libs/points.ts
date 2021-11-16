@@ -1259,5 +1259,93 @@
                     ]
                 }
             ]
+        },
+        {
+            "description": "Steel Series",
+            "color": "lightgray",
+            "matches": [
+                {
+                    "description": "Day 1",
+                    "games": [
+                        {
+                            "pointX": 2530.156289424861,
+                            "pointY": 578,
+                            "circleX": 2542.153617810761,
+                            "circleY": 586
+                        },
+                        {
+                            "pointX": 1040.2277551020409,
+                            "pointY": 1850,
+                            "circleX": 1033.2293135435993,
+                            "circleY": 1842
+                        },
+                        {
+                            "pointX": 1230.1934693877552,
+                            "pointY": 3020,
+                            "circleX": 1217.1963636363637,
+                            "circleY": 3032
+                        },
+                        {
+                            "pointX": 1306.304341372913,
+                            "pointY": 2354,
+                            "circleX": 1308.3038961038965,
+                            "circleY": 2344
+                        },
+                        {
+                            "pointX": 1480.2656029684604,
+                            "pointY": 2852,
+                            "circleX": 1496.2620408163268,
+                            "circleY": 2852
+                        },
+                        {
+                            "pointX": 2809.9694990723565,
+                            "pointY": 2882,
+                            "circleX": 2774.977291280149,
+                            "circleY": 2896
+                        }
+                    ]
+                },
+                {
+                    "description": "Day 2",
+                    "games": [
+                        {
+                            "pointX": 1562.247346938776,
+                            "pointY": 2387,
+                            "circleX": 1561.2475695732842,
+                            "circleY": 2381
+                        },
+                        {
+                            "pointX": 2312.2669387755104,
+                            "pointY": 1626,
+                            "circleX": 2305.2684972170687,
+                            "circleY": 1615
+                        },
+                        {
+                            "pointX": 1545.2464564007423,
+                            "pointY": 624,
+                            "circleX": 1546.246233766234,
+                            "circleY": 641
+                        },
+                        {
+                            "pointX": 971.3742486085343,
+                            "pointY": 1337,
+                            "circleX": 978.372690166976,
+                            "circleY": 1350
+                        },
+                        {
+                            "pointX": 2592.164749536178,
+                            "pointY": 2755,
+                            "circleX": 2598.163413729128,
+                            "circleY": 2749
+                        },
+                        {
+                            "pointX": 714.2359925788498,
+                            "pointY": 1544,
+                            "circleX": 704.2382189239333,
+                            "circleY": 1561
+                        }
+                    ]
+                }
+            ]
         }
     ]
