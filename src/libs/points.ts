@@ -292,7 +292,7 @@ export const endpoints = [
                 ]
             },
             {
-                "description": "Round 4 -A vs D",
+                "description": "Round 4 - A vs D",
                 "games": [
                     {
                         "pointX": 1998.2166233766234,
@@ -1582,7 +1582,7 @@ export const endpoints = [
                 ]
             },
             {
-                "description": "Round 4 - C vs B",
+                "description": "Round 4 - B vs C",
                 "games": [
                     {
                         "pointX": 1439.1705380333951,
