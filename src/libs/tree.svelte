@@ -53,7 +53,7 @@
     }
 </script>
 
-<div class:collapsed={!expanded}>
+<div class="side-panel" class:collapsed={!expanded}>
     <button class="expand-button" on:click={() => (expanded = !expanded)}>
         {#if expanded}&#8592;{:else}&#8594;{/if}
     </button>
@@ -184,8 +184,9 @@
 {/if}
 
 <style>
-    .top-level {
-        width: 200px;
+    .side-panel {
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .caret {
