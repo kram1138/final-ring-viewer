@@ -187,8 +187,8 @@
     .side-panel {
         overflow-y: auto;
         overflow-x: hidden;
+        flex-shrink: 0;
     }
-
     .caret {
         cursor: pointer;
         user-select: none;
@@ -208,6 +208,7 @@
 
     ul {
         list-style-type: none;
+        padding-right: 16px;
     }
 
     .nested-list {
