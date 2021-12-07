@@ -1417,6 +1417,130 @@
             "circleY": 1448
           }
         ]
+      },
+      {
+        "description": "Round 5 - A vs B",
+        "games": [
+          {
+            "pointX": 1484.3166051660517,
+            "pointY": 2448,
+            "circleX": 1492.3146371463715,
+            "circleY": 2436
+          },
+          {
+            "pointX": 2829.159901599016,
+            "pointY": 1560,
+            "circleX": 2842.156703567036,
+            "circleY": 1566
+          },
+          {
+            "circleX": 1766.2531365313653,
+            "circleY": 2407,
+            "pointX": 1777.250430504305,
+            "pointY": 2410
+          },
+          {
+            "pointX": 3241.0226322263225,
+            "pointY": 2574,
+            "circleX": 3239.0231242312425,
+            "circleY": 2565
+          },
+          {
+            "pointX": 2900.332595325953,
+            "pointY": 2531,
+            "circleX": 2890.3350553505534,
+            "circleY": 2547
+          },
+          {
+            "pointX": 2305.258302583026,
+            "pointY": 931,
+            "circleX": 2322.2541205412053,
+            "circleY": 928
+          }
+        ]
+      },
+      {
+        "description": "Round 5 - C vs D",
+        "games": [
+          {
+            "pointX": 3307.2334563345635,
+            "pointY": 1438,
+            "circleX": 3308.233210332103,
+            "circleY": 1458
+          },
+          {
+            "pointX": 2416.278228782288,
+            "pointY": 546,
+            "circleX": 2395.2833948339485,
+            "circleY": 545
+          },
+          {
+            "pointX": 2179.349323493235,
+            "pointY": 3560,
+            "circleX": 2164.3530135301353,
+            "circleY": 3548
+          },
+          {
+            "pointX": 791.2649446494465,
+            "pointY": 826,
+            "circleX": 793.2644526445265,
+            "circleY": 848
+          },
+          {
+            "pointX": 2724.0949569495697,
+            "pointY": 480,
+            "circleX": 2714.09741697417,
+            "circleY": 490
+          },
+          {
+            "pointX": 682.3773677736777,
+            "pointY": 1718,
+            "circleX": 702.3724477244773,
+            "circleY": 1717
+          }
+        ]
+      },
+      { "description": "Round 6 - A vs C (Can't find vod)", "games": [] },
+      {
+        "description": "Round 6 - B vs D",
+        "games": [
+          {
+            "pointX": 1359.139237392374,
+            "pointY": 1388,
+            "circleX": 1362.1384993849938,
+            "circleY": 1395
+          },
+          {
+            "pointX": 2039.1495694956952,
+            "pointY": 3089,
+            "circleX": 2041.149077490775,
+            "circleY": 3092
+          },
+          {
+            "pointX": 1893.3062730627307,
+            "pointY": 1046,
+            "circleX": 1895.3057810578107,
+            "circleY": 1054
+          },
+          {
+            "pointX": 2670.2115621156213,
+            "pointY": 2513,
+            "circleX": 2669.211808118081,
+            "circleY": 2509
+          },
+          {
+            "pointX": 1650.281180811808,
+            "pointY": 3252,
+            "circleX": 1643.2829028290284,
+            "circleY": 3242
+          },
+          {
+            "circleX": 1203.2437884378844,
+            "circleY": 2431,
+            "pointX": 1195.2457564575648,
+            "pointY": 2423
+          }
+        ]
       }
     ]
   },
