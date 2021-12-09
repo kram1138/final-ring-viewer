@@ -15,6 +15,7 @@ export type Endpoint = {
     pointY?: number;
     circleX?: number;
     circleY?: number;
+    winner?: string;
 };
 
 export type EndpointMarker = {
@@ -57,7 +58,7 @@ export function toMarker(color: string, group: string, match: string) {
     return (point: Endpoint, index: number): EndpointMarker => ({
         ...point,
         color,
-        tooltip: `${group}, ${match}, Game ${index + 1}`,
+        tooltip: `${group}, ${match}, Game ${index + 1}${point.winner?.length ? ", Winner: " + point.winner : ""}`,
     });
 }
 
