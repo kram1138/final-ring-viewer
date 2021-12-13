@@ -62,10 +62,12 @@ export function toMarker(color: string, group: string, match: string) {
     });
 }
 
-export function groupsToPoints(groups: GroupInfo[]) {
+export function groupsToPoints(groups: GroupInfo[], winner: string) {
     return groups.flatMap(({ matches, description: group, color }) =>
         matches.flatMap(({ games, description: match }) =>
-            games.map(toMarker(color, group, match))
+            games
+                .filter(game => winner === "All" || winner === game.winner)
+                .map(toMarker(color, group, match))
         )
     )
 }

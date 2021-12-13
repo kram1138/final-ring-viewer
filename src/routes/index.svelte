@@ -11,6 +11,7 @@
 
 <script lang="ts">
     import { dev } from "$app/env";
+    import { uniq } from "lodash-es";
     import {
         EndpointMarker,
         GroupInfo,
@@ -35,15 +36,32 @@
     let selectedGroup: number | "all" = "all";
     let selectedMatch: number | "all" = "all";
     let selectedGame: number | "all" = "all";
+    let selectedWinner = "All";
+
+    $: availableWinners = [
+        "All",
+        ...uniq(
+            allGroups
+                .flatMap((group) =>
+                    group.matches.flatMap((match) =>
+                        match.games.map((game) => game.winner)
+                    )
+                )
+                .filter((winner) => winner?.length)
+                .sort()
+        ),
+    ];
 
     $: if (selectedGroup === "all") {
-        points = groupsToPoints(allGroups);
+        points = groupsToPoints(allGroups, selectedWinner);
     } else if (selectedMatch === "all") {
-        points = groupsToPoints([allGroups[selectedGroup]]);
+        points = groupsToPoints([allGroups[selectedGroup]], selectedWinner);
     } else {
         const group = allGroups[selectedGroup];
         const match = group.matches[selectedMatch];
-        points = match.games.map((point, i) =>
+        points = match.games
+        .filter(game => selectedWinner === "All" || selectedWinner === game.winner)
+        .map((point, i) =>
             toMarker(
                 selectedGame === "all" || i !== selectedGame
                     ? group.color
@@ -168,6 +186,13 @@
         on:addGame={addGame}
         on:addMatch={addMatch}
     >
+        <label for="winner">Filter by winner:</label>
+
+        <select bind:value={selectedWinner} name="winner" id="winner">
+            {#each availableWinners as winner}
+                <option value={winner}>{winner}</option>
+            {/each}
+        </select>
         {#if dev}
             <span>
                 <input
