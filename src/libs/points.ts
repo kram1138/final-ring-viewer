@@ -108,7 +108,7 @@ export const endpoints = [
                         "circleY": 3923
                     },
                     {
-                        "winner": "C9",
+                        "winner": "Cloud9",
                         "pointX": 936,
                         "pointY": 1420,
                         "circleX": 939,
@@ -122,7 +122,7 @@ export const endpoints = [
                         "circleY": 1385
                     },
                     {
-                        "winner": "C9",
+                        "winner": "Cloud9",
                         "pointX": 3367,
                         "pointY": 2511,
                         "circleX": 3377,
@@ -162,7 +162,7 @@ export const endpoints = [
                         "circleY": 3447
                     },
                     {
-                        "winner": "COL",
+                        "winner": "Complexity",
                         "pointX": 2617,
                         "pointY": 3799,
                         "circleX": 2627,
@@ -242,7 +242,7 @@ export const endpoints = [
                 "description": "Round 3 - A vs C",
                 "games": [
                     {
-                        "winner": "COL",
+                        "winner": "Complexity",
                         "pointX": 2532,
                         "pointY": 3917,
                         "circleX": 2524,
@@ -256,14 +256,14 @@ export const endpoints = [
                         "circleY": 2101
                     },
                     {
-                        "winner": "DY",
+                        "winner": "Dubbleyew",
                         "pointX": 1519,
                         "pointY": 2479,
                         "circleX": 1529,
                         "circleY": 2454
                     },
                     {
-                        "winner": "COL",
+                        "winner": "Complexity",
                         "pointX": 2315,
                         "pointY": 1659,
                         "circleX": 2320,
@@ -296,14 +296,14 @@ export const endpoints = [
                         "circleY": 626
                     },
                     {
-                        "winner": "SEN",
+                        "winner": "Sentinals",
                         "pointX": 1013.3502040816327,
                         "pointY": 2929,
                         "circleX": 1012.350426716141,
                         "circleY": 2914
                     },
                     {
-                        "winner": "SEN",
+                        "winner": "Sentinals",
                         "pointX": 2526.271391465677,
                         "pointY": 2638,
                         "circleX": 2539.2684972170687,
@@ -324,7 +324,7 @@ export const endpoints = [
                         "circleY": 668
                     },
                     {
-                        "winner": "TOR",
+                        "winner": "Torrent",
                         "pointX": 3295.1553988868277,
                         "pointY": 1428,
                         "circleX": 3283.158070500928,
@@ -336,14 +336,14 @@ export const endpoints = [
                 "description": "Round 4 - A vs D",
                 "games": [
                     {
-                        "winner": "100T",
+                        "winner": "100 Thieves",
                         "pointX": 1998.2166233766234,
                         "pointY": 2760,
                         "circleX": 2006.2148423005565,
                         "circleY": 2750
                     },
                     {
-                        "winner": "C9",
+                        "winner": "Cloud9",
                         "circleX": 3084.135361781076,
                         "circleY": 1399,
                         "pointX": 3090.134025974026,
@@ -390,7 +390,7 @@ export const endpoints = [
                         "circleY": 3451
                     },
                     {
-                        "winner": "C9",
+                        "winner": "Cloud9",
                         "pointX": 3277.290282902829,
                         "pointY": 1135,
                         "circleX": 3276.290528905289,
@@ -451,7 +451,7 @@ export const endpoints = [
                         "circleY": 3215
                     },
                     {
-                        "winner": "TOR",
+                        "winner": "Torrent",
                         "pointX": 2368.1869618696187,
                         "pointY": 741,
                         "circleX": 2372.1859778597786,
@@ -498,21 +498,21 @@ export const endpoints = [
                         "circleY": 3335
                     },
                     {
-                        "winner": "100T",
+                        "winner": "100 Thieves",
                         "pointX": 1277.392127921279,
                         "pointY": 1832,
                         "circleX": 1257.3970479704797,
                         "circleY": 1851
                     },
                     {
-                        "winner": "100T",
+                        "winner": "100 Thieves",
                         "pointX": 2552.249200492005,
                         "pointY": 3979,
                         "circleX": 2552.249200492005,
                         "circleY": 3961
                     },
                     {
-                        "winner": "100T",
+                        "winner": "100 Thieves",
                         "pointX": 3044.189667896679,
                         "pointY": 1794,
                         "circleX": 3037.191389913899,
@@ -524,14 +524,14 @@ export const endpoints = [
                 "description": "Round 6 - B vs D",
                 "games": [
                     {
-                        "winner": "COL",
+                        "winner": "Complexity",
                         "pointX": 1603.3448954489545,
                         "pointY": 1946,
                         "circleX": 1609.3434194341944,
                         "circleY": 1944
                     },
                     {
-                        "winner": "C9",
+                        "winner": "Cloud9",
                         "pointX": 1035.1628536285364,
                         "pointY": 2749,
                         "circleX": 1022.1660516605166,
@@ -545,7 +545,7 @@ export const endpoints = [
                         "circleY": 2639
                     },
                     {
-                        "winner": "DY",
+                        "winner": "Dubbleyew",
                         "pointX": 2532.146617466175,
                         "pointY": 3069,
                         "circleX": 2537.1453874538747,
@@ -559,11 +559,65 @@ export const endpoints = [
                         "circleY": 3854
                     },
                     {
-                        "winner": "SEN",
+                        "winner": "Sentinals",
                         "pointX": 706.2787207872079,
                         "pointY": 1642,
                         "circleX": 724.2742927429275,
                         "circleY": 1646
+                    }
+                ]
+            },
+            {
+                "description": "Split 1 Playoffs",
+                "games": [
+                    {
+                        "winner": "NRG",
+                        "circleX": 1525.400420068017,
+                        "circleY": 1993.90722704382,
+                        "pointX": 1525.400420068017,
+                        "pointY": 1989.9082753258108
+                    },
+                    {
+                        "winner": "Noble",
+                        "circleX": 1935.5491840855084,
+                        "circleY": 1041.3666213714691,
+                        "pointX": 1935.5491840855084,
+                        "pointY": 1041.3666213714691
+                    },
+                    {
+                        "winner": "G2",
+                        "circleX": 1289.8984023455741,
+                        "circleY": 3311.92530990816,
+                        "pointX": 1294.8991239198244,
+                        "pointY": 3320.922951273681
+                    },
+                    {
+                        "winner": "TSM",
+                        "circleX": 1931.7272852877832,
+                        "circleY": 3027.335419727455,
+                        "pointX": 1930.727140972933,
+                        "pointY": 3017.3380404324316
+                    },
+                    {
+                        "winner": "Torrent",
+                        "circleX": 3314.908793014777,
+                        "circleY": 1909.1236972749066,
+                        "pointX": 3315.908937329627,
+                        "pointY": 1897.1268421208788
+                    },
+                    {
+                        "winner": "Sentinels",
+                        "circleX": 2229.705638060278,
+                        "circleY": 3573.669791172919,
+                        "pointX": 2225.7050608008776,
+                        "pointY": 3569.6708394549096
+                    },
+                    {
+                        "winner": "TSM",
+                        "circleX": 2639.5164206022673,
+                        "circleY": 3861.6464363890445,
+                        "pointX": 2646.517430806218,
+                        "pointY": 3875.642767402077
                     }
                 ]
             }
@@ -906,7 +960,7 @@ export const endpoints = [
                 "description": "Round 4 - A vs D",
                 "games": [
                     {
-                        "winner": "69iq",
+                        "winner": "69iQ",
                         "pointX": 854.2433395176253,
                         "pointY": 3182,
                         "circleX": 839.2466790352505,
@@ -1035,7 +1089,7 @@ export const endpoints = [
                         "pointY": 2165
                     },
                     {
-                        "winner": "69iq",
+                        "winner": "69iQ",
                         "pointX": 2992.309225092251,
                         "pointY": 1694,
                         "circleX": 2989.309963099631,
@@ -1122,7 +1176,7 @@ export const endpoints = [
                         "circleY": 3889
                     },
                     {
-                        "winner": "69iq",
+                        "winner": "69iQ",
                         "pointX": 2381.3532595325955,
                         "pointY": 1718,
                         "circleX": 2378.3539975399754,
@@ -1134,6 +1188,81 @@ export const endpoints = [
                         "pointY": 3137,
                         "circleX": 1054.3896678966792,
                         "circleY": 3162
+                    }
+                ]
+            },
+            {
+                "description": "Split 1 Playoffs",
+                "games": [
+                    {
+                        "winner": "iG",
+                        "circleX": 2084.981524334027,
+                        "circleY": 3250.0102054946196,
+                        "pointX": 2078.9794362052226,
+                        "pointY": 3258.008108930638
+                    },
+                    {
+                        "winner": "Alliance",
+                        "circleX": 2423.1185469170764,
+                        "circleY": 2843.7667267474812,
+                        "pointX": 2437.120567324977,
+                        "pointY": 2827.770919875444
+                    },
+                    {
+                        "winner": "Gambit",
+                        "circleX": 1236.0933004725102,
+                        "circleY": 3306.639637810895,
+                        "pointX": 1240.0938777319104,
+                        "pointY": 3292.6433067978624
+                    },
+                    {
+                        "winner": "Major Pushers",
+                        "circleX": 3259.369395470242,
+                        "circleY": 2421.0864527546555,
+                        "pointX": 3258.3692511553927,
+                        "pointY": 2413.088549318637
+                    },
+                    {
+                        "winner": "69iQ",
+                        "circleX": 1274.8886635524673,
+                        "circleY": 2301.0898901807054,
+                        "pointX": 1290.8909725900678,
+                        "pointY": 2301.0898901807054
+                    },
+                    {
+                        "winner": "Rebel",
+                        "circleX": 1957.5344599585221,
+                        "circleY": 3517.2353087973397,
+                        "pointX": 1958.5346042733722,
+                        "pointY": 3516.2355708678374
+                    },
+                    {
+                        "winner": "Magicians",
+                        "circleX": 2616.571920775567,
+                        "circleY": 2599.075476303333,
+                        "pointX": 2603.5700446825167,
+                        "pointY": 2612.0720693868634
+                    },
+                    {
+                        "winner": "NEW",
+                        "circleX": 2817.146294903585,
+                        "circleY": 1428.5511342566288,
+                        "pointX": 2817.146294903585,
+                        "pointY": 1443.547203199163
+                    },
+                    {
+                        "winner": "Solaris",
+                        "circleX": 1082.6674556689827,
+                        "circleY": 1255.1911256667622,
+                        "pointX": 1084.8677853704455,
+                        "pointY": 1251.9919825981028
+                    },
+                    {
+                        "winner": "NEW",
+                        "circleX": 992.329945126408,
+                        "circleY": 3235.0476968305784,
+                        "pointX": 1006.3319655343086,
+                        "pointY": 3241.0461244075923
                     }
                 ]
             }
@@ -2912,4 +3041,3 @@ export const endpoints = [
         ]
     }
 ]
-  
